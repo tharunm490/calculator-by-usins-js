@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <style>
+        .container{
+            width: 50%;
+            height: 50%;
+            background-color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        .calculator{
+            background-color: gray;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        form{
+        padding: 10px;
+        margin: 20px;
+        padding: 30px;
+        font-size: 20px;
+        }
+        input{
+            display: inline-flex;
+            gap: 30px;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            border-radius: 10%;
+            /* border: none; */
+            /* box-shadow: 5px 5px 5px white;  */
+            font-weight: 500;
+            font-size: xx-large;
+            
+            
+        }
+       
+
+        /* input[name="display"]{
+            background-color:gray ;
+        } */
+         .or{
+            background-color: orange;
+         }
+         .or:hover{
+            border:3px solid white ;
+         }
+         .t1:hover{
+            background-color: darkgray;
+            border: 3px solid white;
+         }
+         
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input style="width: 100%; text-align: right;"type="text" name="display">
+                </div><br>
+                <div>
+                    <input class="or" type="button" value="AC" onclick="display.value=' ' ">
+                    <input class="or"type="button" value="DE"onclick="display.value=display.value.toString().slice(0,-1) " >
+                    <input class="or"type="button" value="." onclick="display.value+='.' ">
+                    <input class="or"type="button" value="/"onclick="display.value+='/' ">
+                    
+                </div>
+                <div>
+                    <input class="t1" type="button" value="7" onclick="display.value+='7' ">
+                    <input class="t1"type="button" value="8"  onclick="display.value+='8' ">
+                    <input class="t1"type="button" value="9"  onclick="display.value+='9' ">
+                    <input class="t1"type="button" value="X"  onclick="display.value+='*' ">
+                    
+                </div>
+                <div>
+                    <input class="t1"type="button" value="4"onclick="display.value+='4' ">
+                    <input class="t1"type="button" value="5"onclick="display.value+='5' ">
+                    <input class="t1"type="button" value="6"onclick="display.value+='6' ">
+                    <input class="t1"type="button" value="-"onclick="display.value+='-' ">
+                    
+                </div>
+                <div>
+                    <input class="t1"type="button" value="1"onclick="display.value+='1' ">
+                    <input class="t1"type="button" value="2"onclick="display.value+='2' ">
+                    <input class="t1"type="button" value="3"onclick="display.value+='3' ">
+                    <input class="t1"style=" position: absolute; height: 200px; left: 589px;"type="button" value="+"onclick="display.value+='+' ">
+                    
+                </div>
+                <div>
+                    <input class="t1"type="button" value="00"onclick="display.value+='00' ">
+                    <input class="t1"type="button" value="0"onclick="display.value+='0' ">
+                    <input class="t1"type="button" value="=" onclick="display.value=eval(display.value) ">
+                  
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
